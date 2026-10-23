@@ -1,11 +1,11 @@
 @font-face {
   font-family: brut-font; 
-  src: url(fonts/Barlow/Barlow-Light.ttf); 
+  src: url(../fonts/Barlow/Barlow-Light.ttf); 
 }
 
 @font-face {
   font-family: brut-bold;
-  src: url(fonts/Barlow/Barlow-Black.ttf);
+  src: url(../fonts/Barlow/Barlow-Black.ttf);
 }
 
 body
@@ -25,7 +25,7 @@ div
 .main
 {
     display: flex;
-    background: url(concrete.jpeg);
+    background: url(../img/concrete.jpeg);
     align-items: stretch;
 }
 
