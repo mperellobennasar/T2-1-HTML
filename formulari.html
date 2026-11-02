@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta lang="es">
+
+    <meta name="Miquel Àngel Perelló">
+    <meta name="Formularis">
+    <meta name="28/10/2026">
+    
+    <meta charset="UTF-8">
+    <title>Formularis</title>
+
+    <link rel="stylesheet" href="./styles/forms-style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="titulo-principal glass-bg-sharp centrar-elementos center-flex">
+                <h1> Formularios </h1>
+                <img src="./img/logo.png" class="refleccion-imagen" alt="logo" width="40px">
+            </div>
+        </header>
+        
+        <div class="Principal">
+            <div class="Contenido">
+                <div class="seccion-contenido">
+                    <i>Camps obligatoris indicats amb <span class="blue-text">*</span></i>
+
+                    <!--Formulario-->
+                    <form action="#" method="POST">
+                        
+                        <!--Personals =========================================================================== -->
+                        <fieldset class="grid-rows">
+                            <legend>Dades Personals</legend>
+
+                            <div>
+                                <label for="nom">Nom i Cognoms: </label> <br>
+                                <input type="text", name="nom", id="nom", placeholder="Terry A. Davis">
+                            </div>
+                           
+                            <div>
+                                <label for="email">Correu electrònic: </label> <br>
+                                <input type="email", name="email", id="email", placeholder="terry@templeos.org">
+                            </div>
+
+                            <div>
+                                <label for="passwd">Contasenya: </label> <br>
+                                <input type="password", name="passwd", id="passwd" minlength="8">
+                            </div>
+
+                            <div>
+                                <label for="birthday">Data de Naixement: </label> <br>
+                                <input type="date", name="birthday", id="birthday">
+                            </div>
+                       
+                            <div>
+                                <label for="age">Edat: </label> <br>
+                                <input type="number", name="age", id="age" min="16" max="99">
+                            </div>
+                        </fieldset>
+
+                        <!--Academics =========================================================================== -->
+                        <fieldset class="grid-rows">
+                            <legend>Dades Acadèmiques i Preferències</legend>
+
+                            <div class="seccion-contenido" id="temps">
+                                <label for="temps">Temps: </label> <br> 
+                                <input type="radio" id="mati" name="torn" value="Mati">
+                                <label for="mati">Mati</label>
+                                <br>
+                                <input type="radio" id="Tarda" name="torn" value="Tarda">
+                                <label for="tarda">Tarda</label>
+                            </div>
+                                
+                            <div class="seccion-contenido" id="matricules">
+                                <label for="matricules">Matricules: </label> <br>
+                                <input type="checkbox" id="lm" name="checkbox matricules" value="lm">
+                                <label for="lm">Lenguatges de Marques</label> <br>
+                                <input type="checkbox" id="prog" name="checkbox matricules" value="prog">
+                                <label for="prog">Programació</label> <br>
+                                <input type="checkbox" id="db" name="checkbox matricules" value="db">
+                                <label for="db">Base de Dades</label> <br>
+                            </div>
+
+                            <div class="seccion-contenido" id="experiencia">
+                                <label for="experiencia">Nivell d'experiència prèvia: </label> <br> 
+                                
+                                <select name="exp-selector" id="exp-selector">
+                                    <option value="sense">Sense Experiencia</option>
+                                    <option value="basic">Basic</option>
+                                    <option value="intermedi">Intermedi</option>
+                                    <option value="avancat">Avançat</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <!--Buttons =========================================================================== -->
+                        <fieldset>
+                            <legend>Observacions i Botons</legend>
+
+                            <textarea name="comentaris" rows="4" cols="40" placeholder="Observacions / Comentaris..."></textarea> <br>
+                            
+                            <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                            <label for="terms">
+                                Accepto la politica de privacitat
+                                <span class="blue-text">*</span>
+                            </label> <br>
+
+                            <div class="buttons-form">
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

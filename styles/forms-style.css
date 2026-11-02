@@ -1,0 +1,310 @@
+@font-face {
+  font-family: neuropol;
+  src: url(../fonts/neuropol-x-free.ttf);
+}
+
+/* Variables */
+:root{
+    --azul-cyan: #00c9c9;
+    --Azul-azul: #1a1fa1;
+    --verde-detalles: #32e446;
+    --verde-detalles-oscuro: #357c3d;
+    --blanco: #ffffff; /*--blanquillo: #ffffff;*/
+    --negro: #000000;
+    --gris: #242424;
+
+    --altura-titulo: 65px;
+    --margen-superior: 3%;
+}
+
+/* Custom CSS */
+
+h1, legend
+{
+    font-family: neuropol;
+}
+
+input, select, option, textarea
+{
+    color: var(--negro);
+}
+
+fieldset, legend
+{
+    border: 1px solid rgb(107, 107, 107);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(17, 17, 17, 0.5);
+}
+
+legend
+{
+    background-image: linear-gradient(rgb(167, 167, 167) 0%, rgb(122, 122, 122) 20%, rgb(48, 48, 48) 50%, rgb(0, 0, 0) 100%);
+    padding: 10px;
+    font-size: small;
+    border: 1px solid rgb(48, 48, 48);
+}
+
+form input, 
+form textarea, 
+form select, 
+form button {
+    color: var(--blanco);
+    border-color: var(--verde-detalles-oscuro);
+    border-style: solid;
+    border-radius: 5px;
+    background-color: var(--gris);
+
+    accent-color: var(--verde-detalles);
+    transition: all 0.3s ease-in-out;
+}
+
+form input:hover, 
+form select:hover, 
+form button:hover {
+    transform: scale(110%);
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-text {
+    color: var(--azul-cyan);
+}
+
+.grid-rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-rows div * {
+    display: inline-block;
+}
+
+.buttons-form {
+    display: flex;
+    justify-content: stretch;
+}
+
+.buttons-form input {
+    width: 90%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    opacity: 70%;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons-form input:hover {
+    background-image: linear-gradient(rgb(221, 221, 221) 0%, rgb(122, 122, 122) 20%, rgb(0, 0, 0) 50%, var(--verde-detalles) 100%);
+    color: var(--verde-detalles);
+    transform: scale(100%, 150%);
+}
+
+/* Default CSS ========================================================= */
+/* General */
+*
+{
+    margin: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body
+{
+    background-image: url("../img/background.jpg");
+    /* que la imagen ocupe todo el width o height */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+body, html /* POR ALGUNA RAZON, ESTO NO VIENE POR DEFECTO*/
+{
+    width: 100%;
+    height: 100%;
+}
+
+a
+{
+    color: var(--verde-detalles);
+    text-decoration: none;
+}
+
+.a-no-underline:hover
+{
+    text-decoration: none;
+}
+
+::selection
+{
+    background-color: var(--verde-detalles-oscuro);
+}
+
+/* Elementos */
+.contenedor
+{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--margen-superior);
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-principal
+{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: var(--altura-titulo);
+    color: white;
+}
+.titulo-principal *
+{
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.glass-bg-sharp, button
+{
+    background-image: linear-gradient(rgb(167, 167, 167) 0%, rgb(90, 90, 90) 40%, rgb(0, 0, 0) 45%, rgb(48, 48, 48) 100%);
+    margin: 0;
+    padding: 10px;
+    border: 1px solid rgb(48, 48, 48);
+}
+
+.glass-bg
+{
+    background-image: linear-gradient(rgb(167, 167, 167) 0%, rgb(122, 122, 122) 20%, rgb(48, 48, 48) 50%, rgb(0, 0, 0) 100%);
+    margin: 0;
+    padding: 10px;
+    border: 1px solid rgb(48, 48, 48);
+}
+
+/* Navegacion y Cuerpo */
+.Principal
+{
+    display: flex;
+    align-items: stretch;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Navegacion y Cuerpo --> Alineamiento de los divs */
+.Navegacion, .Contenido
+{
+    width: 100%;
+    margin: 0;
+    backdrop-filter: blur(5px);
+}
+
+/* Navegacion y Cuerpo --> Div contenido (cuerpo) */
+.Contenido
+{
+    margin: 0;
+    background-color: rgb(43, 43, 43, 0.7);
+    padding: 5px;
+
+    overflow-y: scroll;
+    scrollbar-color: var(--verde-detalles-oscuro) rgb(43, 43, 43);
+}
+
+.Contenido *
+{
+    margin: 5px;
+}
+
+/* Navegacion y Cuerpo --> Div navegación */
+.Navegacion
+{
+    background-color: rgb(43, 43, 43, 0.9);
+    margin: 0;
+    width: 14%;
+    overflow: hidden;
+    border-bottom-left-radius: 40px;
+    padding: 5px;
+}
+
+/* Navegación --> Div Indice */
+
+.botones_nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones_nav button{
+    margin-bottom: 2%;
+    border-radius: 5px;
+    height: 12px;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 70%;
+    font-size: 0.75rem;
+
+    transition: all 0.3s ease-in-out;
+}
+.botones_nav button:hover{
+    background-image: linear-gradient(rgb(221, 221, 221) 0%, rgb(122, 122, 122) 20%, rgb(0, 0, 0) 50%, var(--verde-detalles) 100%);
+    color: var(--verde-detalles);
+    transform: scale(110%);
+    cursor: url("../OTROS/Link Select.cur"), auto;
+}
+
+/* Navegación --> Compartidos */
+.seccion-contenido{
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(31, 31, 31, 0.1);
+}
+.seccion-contenido-oscuro{
+    border: 1px solid rgb(107, 107, 107);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(17, 17, 17, 0.5);
+}
+
+.titulos-contenido{
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    opacity: 100%;
+    overflow: hidden;
+}
+
+.centrar-elementos
+{
+    text-align: center;
+}
+
+.div-imagenes
+{
+    /*  Si pones una imagen dentro se ajustara a todo el espacio horizontal
+        Ademas se pone como imagen de fondo, por si hay que poner algo encima */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.refleccion-imagen
+{
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+}
+
+.ancho-imagenes
+{
+    width: 99%;
+}
