@@ -60,7 +60,7 @@ form button {
 }
 
 form input:hover, 
-form select:hover, 
+form select:hover,
 form button:hover {
     transform: scale(110%);
 }
